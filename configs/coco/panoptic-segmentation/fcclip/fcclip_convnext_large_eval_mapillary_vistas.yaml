@@ -1,0 +1,15 @@
+_BASE_: ./fcclip_convnext_large_eval_ade20k.yaml
+
+MODEL:
+  # No database is prepared for this dataset, this is the FC-CLIP baseline.
+  KNN_CLIP:
+    ENABLED: False
+  MASK_FORMER:
+    TEST:
+      INSTANCE_ON: False
+INPUT:
+  MIN_SIZE_TEST: 1024
+  MAX_SIZE_TEST: 2560
+
+DATASETS:
+  TEST: ("openvocab_mapillary_vistas_panoptic_val",)

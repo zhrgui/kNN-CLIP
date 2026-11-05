@@ -1,0 +1,13 @@
+_BASE_: ./fcclip_convnext_large_eval_ade20k.yaml
+
+MODEL:
+  KNN_CLIP:
+    DATABASE: "retrieval_db/pc59"
+    CONF_THRESHOLD: 0.95
+  MASK_FORMER:
+    TEST:
+      PANOPTIC_ON: False
+      INSTANCE_ON: False
+
+DATASETS:
+  TEST: ("openvocab_pascal_ctx59_sem_seg_val",)

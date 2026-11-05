@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+
+# Compiled MSDeformAttn op
+build/
+dist/
+*.so
+*.o
+
+# Outputs, weights and retrieval databases
+output/
+retrieval_db/
+*.pth
+*.pkl
+*.index
+
+.DS_Store
+.idea/
+.vscode/
